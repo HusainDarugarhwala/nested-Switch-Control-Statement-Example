@@ -1,0 +1,162 @@
+/*
+ * 
+ *  This program is created as a practice note for the usage of nested Switch Control Statement.
+ *  
+ *  The String input is taken by using Scanner class imported by using ( import java.util.Scanner ) to take input by user.
+ *  However the input can be taken by user only once so there is no Second Chance to Enter Correct chosen index , 
+ * */
+
+
+
+
+import java.io.IOException;
+import java.util.Scanner;
+// class menu has been created  
+class menu
+{
+	
+	
+	// calling main Method 
+	public static void main (String[] Args) throws IOException 
+	{
+	float a=9;
+	float b=6;
+	float c=3;
+	String Choice2,Choice3;
+	char choice='7';
+	
+			System.out.println("*Choose Wisely*");
+			System.out.println("1. Addition");
+			System.out.println("2. Subtraction");
+			System.out.println("3. Multipliction");
+			System.out.println("4. Divison");
+			System.out.println("5. Multiply And Subtracting to Choice");
+			System.out.println("6. Dividing and Adding to Choice");
+			System.out.println("****\tChoose a valid 'Index' between 1-6\t****");
+			System.out.println("\n");
+			
+			// taking input from user
+			choice=(char) System.in.read();
+			
+			System.out.println("\n");
+			// Switch Control Statement has been Started 
+			switch (choice) {
+			case '1':
+				System.out.println("  a= "+a);
+				System.out.println("  b= "+b);
+				System.out.println("c="+(a +b));
+				break;
+			case '2':
+				System.out.println("  a= "+a);
+				System.out.println("  b= "+b);
+				System.out.println("c="+(a -b));
+				break;
+			case'3':
+				System.out.println("  a= "+a);
+				System.out.println("  b= "+b);
+				System.out.println("c="+(a * b));
+				break;
+			case'4':
+				System.out.println("  a= "+a);
+				System.out.println("  b= "+b);
+				System.out.println("c="+(a / b));
+				break;
+			case'5':
+				
+				
+				System.out.println(" Select Variables between : \n");
+				System.out.println("A, B, or C \n ");
+				System.out.println("Their Values are as follows ");
+				System.out.println("A=9,\nB=6,\nC=3");
+				System.out.println("*******************************");
+								
+				// taking another user input on basis of previous Input
+				// but this time using scanner class
+				Scanner num = new Scanner (System.in);  
+				Choice2 = num.next();
+				
+				
+				System.out .println("\n");
+				
+					// Using nested Switch Control Statement for further processing on basis of new User Input
+					switch (Choice2) {
+						case "A":
+						case "a":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'A' Have Been Selected For Subtraction****** ");
+							System.out.println("(A=9)*(B=6)=("+(a*b)+") and The Result After Subtraction By 'A' Is =("+((a*b)-a)+")"  );
+							break;
+						case "B":
+						case "b":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'B' Have Been Selected For Subtraction****** ");
+							System.out.println("(A=9)*B=6)=("+(a*b)+") and The Result After Subtraction By 'B' Is =("+((a*b)-b)+")"  );
+							break;
+						case "C":
+						case "c":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'C' Have Been Selected For Subtraction****** ");
+							System.out.println("(A=9)*(B=6)=("+(a*b)+") and The Result After Subtraction By 'C' Is =("+((a*b)-c)+")"  );
+							break;
+						default:
+							System.out.println("!!! Invalid Selection !!!");
+							break;	// breaking out of inner Switch
+							
+									
+						}break;// breaking out of " Case '5' : " of outer Switch Control Statement
+					
+			case'6':
+				
+				
+				
+				System.out.println(" Select Variables between : \n");
+				System.out.println("A, B, or C \n ");
+				System.out.println("Their Values are as follows ");
+				System.out.println("A=9,\nB=6,\nC=3");
+				System.out.println("*******************************");
+				System.out.println("**** Note: Enter Your Selection In Small Letters Only **** ");
+
+					System.out .println("\n");
+					Scanner num2 = new Scanner (System.in);
+					
+					Choice3 = num2.next();
+					
+						
+					// Using nested Switch Control Statement for further processing on basis of new User Input
+					switch (Choice3) {
+						case "A":
+						case "a":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'A' Have Been Selected For Addition****** ");
+							System.out.println("A/B=("+(a/b)+") and The Result After Addition By 'A' Is =("+((a/b)+a)+")"  );
+							break;
+						case "B":
+						case "b":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'B' Have Been Selected For Addition****** ");
+							System.out.println("A/B=("+(a/b)+") and The Result After Addition By 'B' Is =("+((a/b)+b)+")"  );
+							break;
+						case "C":
+						case "c":
+							System.out.println("***********************************************************\n\n\n");
+							System.out.println(" *****Variable 'C' Have Been Selected For Addition****** ");
+							System.out.println("A/B=("+(a/b)+") and The Result After Addition By 'C' Is =("+((a/b)+c)+")"  );
+							break;
+						default:
+							System.out.println("!!! Invalid Selection !!!");
+							break;// breaking out of inner Switch Control Statement 
+							
+					}break;// breaking out of " Case '6' : " of outer Switch Control Statement
+
+			
+					
+			case '7':
+				System.out.print("***** Choose a valid Option Between '1' to '6' ***** ");
+						
+			default:
+				System.out.print("!!!! Invalid Option Selected !!!!");
+			}
+			
+		}
+
+}
